@@ -67,7 +67,7 @@ void Scene::Update(float InDeltaTime)
 
             XRay PixelRay{CameraPosition, RayDirection};
 
-            XColor PixelColor = Raytracer.Raytrace(PixelRay, *this);
+            XColor PixelColor = Raytracer.Raytrace(PixelRay, *this, 1);
             
             uint8_t R = static_cast<uint8_t>(PixelColor.R * 255.f);
             uint8_t G = static_cast<uint8_t>(PixelColor.G * 255.f);
