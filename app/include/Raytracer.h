@@ -9,8 +9,14 @@ struct XRay
     Vector3f Direction;
 };
 
+struct RayHit {
+    float Distance;
+    const Sphere* Object;
+    Vector3f Point;
+};
+
 class Raytracer 
 {
 public:
-    XColor Raytrace(XRay InRay, Scene& InScene);
+    XColor Raytrace(const XRay& InRay, Scene& InScene);
 };
